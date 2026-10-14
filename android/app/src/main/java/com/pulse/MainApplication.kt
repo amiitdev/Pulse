@@ -14,8 +14,8 @@ class MainApplication : Application(), ReactApplication {
       context = applicationContext,
       packageList =
         PackageList(this).packages.apply {
-          // Packages that cannot be autolinked yet can be added manually here, for example:
-          // add(MyReactNativePackage())
+          // Pulse native monitor modules cannot be autolinked (no npm package).
+          add(com.pulse.pulse.PulsePackage())
         },
     )
   }
